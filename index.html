@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>News homepage</title>
+  </head>
+  <body>
+    <div class="container px-[15px] mx-auto relative overflow-hidden">
+      <nav class="flex justify-between py-[20px]">
+        <img src="./images/logo.svg" alt="">
+        <ul class="flex text-[#5d5f79]">
+          <li class="cursor-pointer hover:text-[#f15e50]">Home</li>
+          <li class="cursor-pointer hover:text-[#f15e50]">New</li>
+          <li class="cursor-pointer hover:text-[#f15e50]">Popular</li>
+          <li class="cursor-pointer hover:text-[#f15e50]">Trending</li>
+          <li class="cursor-pointer hover:text-[#f15e50]">Categories</li>
+          <div class="closemenu md:hidden"><img class="absolute right-6 top-6 cursor-pointer" src="./images/icon-menu-close.svg" alt=""></div>
+        </ul>
+        <div class="menu md:hidden"><img src="./images/icon-menu.svg" alt=""></div>
+      </nav>
+      <section class="md:flex md:gap-[20px]">
+        <div class="content md:w-[70%] flex flex-col">
+          <div class="bg-img h-auto flex-1"></div>
+          <div class="md:flex pt-[20px]">
+            <h1 class="text-6xl font font-extrabold md:w-[50%]">The Bright Future of <br>Web 3.0?</h1>
+            <div class="space-y-6 md:w-[50%]">
+              <p class="pb-[50px] text-[#5d5f79]">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+              <a class="text-white py-[10px] px-[50px] block w-fit bg-[#f15e50] hover:bg-[#00001a]" href="#">READ MORE</a>
+            </div>
+          </div>
+        </div>
+        <aside class="p-[20px] bg-[#00001a] md:w-[30%] max-md:mt-[50px]">
+          <h1 class="text-4xl font-bold text-[#e9ab53]">NEW</h1>
+          <div class="py-[20px]">
+            <p class="text-2xl text-[#fffdfa] font-bold cursor-pointer hover:text-[#e9ab53]">Hydrogen VS Electric Cars</p>
+            <p class="text-[#5d5f79]">Will hydrogen-fueledcats ever catch up to EVs?</p>
+          </div>
+          <div class="py-[20px] border-t-[1px] border-gray-500">
+            <p class="text-2xl text-[#fffdfa] font-bold cursor-pointer hover:text-[#e9ab53]">Hydrogen VS Electric Cars</p>
+            <p class="text-[#5d5f79]">Will hydrogen-fueledcats ever catch up to EVs?</p>
+          </div>
+          <div class="py-[20px] border-t-[1px] border-gray-500">
+            <p class="text-2xl text-[#fffdfa] font-bold cursor-pointer hover:text-[#e9ab53]">Hydrogen VS Electric Cars</p>
+            <p class="text-[#5d5f79]">Will hydrogen-fueledcats ever catch up to EVs?</p>
+          </div>
+        </aside>
+      </section>
+      <div class="max-md:flex-col flex gap-[20px] mt-[50px]">
+        <div class="flex gap-[20px]">
+          <img class="h-[100px]" src="./images/image-retro-pcs.jpg" alt="">
+          <div>
+            <p class="text-2xl font-bold text-[#c5c6ce]">01</p>
+            <p class="font-bold cursor-pointer hover:text-[#f15e50]">Reviving Retro PCs</p>
+            <p class="text-[#5d5f79]">What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="flex gap-[20px]">
+          <img class="h-[100px]" src="./images/image-top-laptops.jpg" alt="">
+          <div>
+            <p class="text-2xl font-bold text-[#c5c6ce]">02</p>
+            <p class="font-bold cursor-pointer hover:text-[#f15e50]">Top 10 Laptops of 2022</p>
+            <p class="text-[#5d5f79]">Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+        <div class="flex gap-[20px]">
+          <img class="h-[100px]" src="./images/image-gaming-growth.jpg" alt="">
+          <div>
+            <p class="text-2xl font-bold text-[#c5c6ce]">03</p>
+            <p class="font-bold cursor-pointer hover:text-[#f15e50]">The Growth of Gaming</p>
+            <p class="text-[#5d5f79]">How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <script>
+    let openMenu = document.querySelector(".menu")
+    let closeMenu = document.querySelector(".closemenu")
+    let overlay = document.querySelector(".overlay")
+    let menu = document.querySelector("ul")
+    openMenu.onclick = () =>{
+      menu.style.right = "0px"
+      overlay.style.display = "block"
+      }
+    closeMenu.onclick = () =>{
+      menu.style.right = "-100%"
+      overlay.style.display = "none"
+    }
+      console.log(overlay);
+    </script>
+    <!-- <script src="./main.js"></script> -->
+  </body>
+</html>
